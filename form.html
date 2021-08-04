@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>JavaScript Form Validation</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+
+   <body>
+      <main class="validation-form">
+         <h1>Welcome to the best form on Internet!</h1>
+         <div class="form-message hide">Form Successfully Submitted!</div>
+
+         <form
+            name="myForm"
+            id="myForm"
+            onsubmit="return validateForm(event)"
+            method="post"
+         >
+            <div class="formdesign" id="name">
+               <label class="input-label" for="name">Name:</label>
+               <input type="text" name="fname" required /><b
+                  ><span class="formerror"> </span
+               ></b>
+            </div>
+
+            <div class="formdesign" id="email">
+               <label class="input-label" for="email">Email:</label>
+               <input type="email" name="femail" required /><b
+                  ><span class="formerror"> </span
+               ></b>
+            </div>
+
+            <div class="formdesign" id="phone">
+               <label class="input-label" for="email">Phone:</label>
+
+               <input type="phone" name="fphone" required /><b
+                  ><span class="formerror"></span
+               ></b>
+            </div>
+
+            <div id="gender-radio">
+               <label class="input-label gender" for="gender">Gender:</label>
+               <div class="gender-inputs">
+                  <label for="gender">Male</label>
+                  <input type="radio" name="gender" value="0" required />
+
+                  <label for="gender">Female</label>
+                  <input type="radio" name="gender" value="1" required />
+               </div>
+            </div>
+
+            <div class="formdesign" id="dob">
+               <label class="input-label" for="gender">Date of Birth:</label>
+               <input type="date" name="fDate" required /><b
+                  ><span class="formerror"></span
+               ></b>
+            </div>
+
+            <div class="formdesign" id="address">
+               <label class="input-label" for="gender">Address</label>
+               <input type="address" name="faddress" required /><b
+                  ><span class="formerror"></span
+               ></b>
+            </div>
+
+            <input class="but" type="submit" value="Submit" />
+         </form>
+      </main>
+   </body>
+   <script src="index.js"></script>
+</html>
